@@ -10,204 +10,18 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --primary-color: #ff4757; /* Appetizing Red */
-            --secondary-color: #2f3542;
-            --light-bg: #f1f2f6;
-            --dark-bg: #1e272e;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* --- Navbar --- */
-        .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 15px 0;
-        }
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary-color) !important;
-        }
-        .nav-link {
-            color: var(--secondary-color);
-            font-weight: 500;
-            margin-left: 15px;
-            transition: 0.3s;
-        }
-        .nav-link:hover {
-            color: var(--primary-color);
-        }
-        .btn-custom {
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            padding: 8px 25px;
-            transition: 0.3s;
-        }
-        .btn-custom:hover {
-            background-color: #e84118;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
-        .hero span {
-            color: var(--primary-color);
-        }
-
-        /* --- Section Styling --- */
-        section {
-            padding: 80px 0;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            position: relative;
-            display: inline-block;
-        }
-        .section-title h2::after {
-            content: '';
-            width: 50px;
-            height: 3px;
-            background: var(--primary-color);
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        /* --- Services --- */
-        .service-card {
-            text-align: center;
-            padding: 30px;
-            border-radius: 15px;
-            background: white;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            transition: 0.3s;
-            height: 100%;
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        .service-icon {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        /* --- Menu / Prices --- */
-        .price-card {
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
-        .price-card:hover {
-            transform: scale(1.02);
-        }
-        .price-img {
-            height: 200px;
-            object-fit: cover;
-        }
-        .price-tag {
-            background: var(--primary-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            position: absolute;
-            top: 15px;
-            right: 15px;
-        }
-
-        /* --- Reviews --- */
-        .reviews-section {
-            background-color: var(--light-bg);
-        }
-        .review-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-        }
-        .client-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-            border: 3px solid var(--primary-color);
-        }
-
-        /* --- Contact --- */
-        .contact-section {
-            background: var(--dark-bg);
-            color: white;
-        }
-        .contact-section h2 {
-            color: white;
-        }
-        .form-control {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            color: white;
-            padding: 15px;
-        }
-        .form-control:focus {
-            background: rgba(255,255,255,0.15);
-            color: white;
-            border-color: var(--primary-color);
-            box-shadow: none;
-        }
-
-        /* --- Footer --- */
-        footer {
-            background: #111;
-            color: #aaa;
-            padding: 20px 0;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#"><i class="fas fa-utensils me-2"></i>Food-U</a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
@@ -215,7 +29,7 @@
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-custom ms-2" href="#contact">Book Now</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-custom ms-2 ps-3 pe-3" href="#contact">Book Now</a></li>
                 </ul>
             </div>
         </div>
@@ -232,14 +46,16 @@
     <section id="about">
         <div class="container">
             <div class="row align-items-center">
+
                 <div class="col-lg-6" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Chefs Cooking" class="img-fluid rounded shadow">
+                    <img src="https://i.pinimg.com/736x/86/a2/ff/86a2ff6b1514c43ac4e7c8ab617f80ed.jpg" alt="Chefs Cooking" width="500px" class="img-fluid rounded shadow">
                 </div>
+                
                 <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
-                    <h5 class="text-danger fw-bold">OUR STORY</h5>
+                    <h5 class="text-danger fw-bold fs-4">OUR STORY</h5>
                     <h2 class="mb-4">We Cook With Passion & Love</h2>
-                    <p class="text-muted">Since 2010, Gourmet Haven has been serving the most exquisite dishes in the city. Our ingredients are locally sourced, organic, and prepared by world-class chefs who believe that food is an art form.</p>
-                    <ul class="list-unstyled">
+                    <p class="text-muted lh-lg">Since 2016, Food-U has been serving the most exquisite dishes in the city. Our ingredients are locally sourced, organic, and prepared by world-class chefs who believe that food is an art form.</p>
+                    <ul class="list-unstyled lh-lg">
                         <li><i class="fas fa-check-circle text-success me-2"></i> Fresh Daily Ingredients</li>
                         <li><i class="fas fa-check-circle text-success me-2"></i> Award Winning Chefs</li>
                         <li><i class="fas fa-check-circle text-success me-2"></i> 100% Organic</li>
@@ -260,22 +76,48 @@
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-card">
                         <i class="fas fa-truck service-icon"></i>
-                        <h4>Fast Delivery</h4>
-                        <p class="text-muted">Hot and fresh food delivered to your doorstep within 30 minutes, guaranteed.</p>
+                        <h4>Full-Service Event Catering</h4>
+                        <p class="text-muted">Whether it’s a wedding for 200 or a gala for 500, we provide comprehensive service including menu planning, professional staffing, table setup, and post-event cleanup.</p>
                     </div>
                 </div>
+
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-card">
                         <i class="fas fa-glass-cheers service-icon"></i>
-                        <h4>Event Catering</h4>
-                        <p class="text-muted">From weddings to corporate events, we handle the food so you can handle the guests.</p>
+                        <h4>Corporate & Office Hospitality</h4>
+                        <p class="text-muted">Fuel your team and impress your clients with high-quality, reliable catering. We specialize in executive boardroom dining, boxed lunches for trainings, and full buffet spreads for conferences.</p>
                     </div>
                 </div>
+
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card">
                         <i class="fas fa-user-tie service-icon"></i>
-                        <h4>Private Chef</h4>
-                        <p class="text-muted">Hire one of our top-tier chefs for an intimate dining experience in your own home.</p>
+                        <h4>Private Chef Experiences</h4>
+                        <p class="text-muted">Bring the fine-dining restaurant experience into the comfort of your own home. Our chefs curate bespoke multi-course menus for anniversaries, small gatherings, and VIP guests.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <i class="fas fa-fire service-icon"></i>
+                        <h4>Interactive Food Stations</h4>
+                        <p class="text-muted">We offer chef-attended stations such as oyster shucking, carving stations, pasta bars, or flambé desserts. It is not just dinner; it is entertainment that encourages guests to mingle.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <i class="fas fa-cocktail service-icon"></i>
+                        <h4>Bar & Beverage Services</h4>
+                        <p class="text-muted">Elevate your event with our fully managed bar packages. We provide TABC-certified bartenders, signature cocktail creation, sommelier-selected wines, and all necessary mixers, ice, and glassware.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <i class="fas fa-chair service-icon"></i>
+                        <h4>Event Design & Rental Coordination</h4>
+                        <p class="text-muted">We coordinate the rental of linens, china, flatware, tables, and chairs to match your aesthetic. We handle the logistics of delivery and setup, so you don't have to juggle multiple vendors.</p>
                     </div>
                 </div>
             </div>
@@ -289,58 +131,135 @@
                 <p class="text-muted mt-2">Curated selections that our clients can't resist.</p>
             </div>
             <div class="row g-4">
+                <!-- Row 1 -->
                 <div class="col-md-4" data-aos="zoom-in">
-                    <div class="card price-card">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=80" class="card-img-top price-img" alt="Burger">
-                            <span class="price-tag">$15.99</span>
+                        <div class="card price-card">
+                            <div class="position-relative">
+                                <img src="https://i.pinimg.com/1200x/4b/70/96/4b70964e686d8621d34ea2693a12d58e.jpg" class="card-img-top price-img" alt="Burger">
+                                <span class="price-tag">₦3,500</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Smoky Party Jollof</h5>
+                                <p class="card-text text-muted">Long-grain rice simmered in a rich tomato-pepper base with that signature firewood smoky taste.</p>
+                                <button class="btn btn-sm btn-outline-danger w-100">Order Now</button>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Gourmet Beef Burger</h5>
-                            <p class="card-text text-muted">Wagyu beef patty, truffle mayo, aged cheddar, and caramelized onions.</p>
-                            <button class="btn btn-sm btn-outline-danger w-100">Order Now</button>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="card price-card">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=80" class="card-img-top price-img" alt="Pizza">
-                            <span class="price-tag">$22.50</span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Truffle Mushroom Pizza</h5>
-                            <p class="card-text text-muted">Stone-baked crust topped with wild mushrooms, truffle oil, and mozzarella.</p>
-                            <button class="btn btn-sm btn-outline-danger w-100">Order Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="card price-card">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=80" class="card-img-top price-img" alt="Salad">
-                            <span class="price-tag">$12.00</span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Organic Green Bowl</h5>
-                            <p class="card-text text-muted">Avocado, quinoa, kale, cherry tomatoes, and a lemon vinaigrette dressing.</p>
-                            <button class="btn btn-sm btn-outline-danger w-100">Order Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="bg-light">
-        <div class="container text-center">
-            <h5 class="text-muted mb-4 text-uppercase fw-bold">Trusted By Top Companies</h5>
-            <div class="row align-items-center justify-content-center opacity-50 grayscale">
-                <div class="col-6 col-md-2 mb-3"><i class="fab fa-google fa-2x"></i></div>
-                <div class="col-6 col-md-2 mb-3"><i class="fab fa-amazon fa-2x"></i></div>
-                <div class="col-6 col-md-2 mb-3"><i class="fab fa-microsoft fa-2x"></i></div>
-                <div class="col-6 col-md-2 mb-3"><i class="fab fa-spotify fa-2x"></i></div>
-                <div class="col-6 col-md-2 mb-3"><i class="fab fa-airbnb fa-2x"></i></div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card price-card">
+                            <div class="position-relative">
+                                <img src="https://i.pinimg.com/1200x/ea/30/80/ea308047cb58f0310c6afa5ecdf450b9.jpg" class="card-img-top price-img" alt="Pizza">
+                                <span class="price-tag">₦4,200</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Special Fried Rice</h5>
+                                <p class="card-text text-muted">A colorful medley of rice, shrimp, liver, and fresh vegetables stir-fried to perfection.</p>
+                                <button class="btn btn-sm btn-outline-danger w-100">Order Now</button>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="card price-card">
+                            <div class="position-relative">
+                                <img src="https://i.pinimg.com/736x/cc/cd/54/cccd5478be8e778fb553e657c53291e9.jpg" class="card-img-top price-img" alt="Salad">
+                                <span class="price-tag">₦5,500</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Pounded Yam & Egusi</h5>
+                                <p class="card-text text-muted">Soft, fluffy pounded yam served with a rich melon seed soup garnished with bitter leaf and stockfish.</p>
+                                <button class="btn btn-sm btn-outline-danger w-100">Order Now</button>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="col-md-4" data-aos="zoom-in">
+                        <div class="card price-card">
+                            <div class="position-relative">
+                                <img src="https://i.pinimg.com/736x/b4/15/45/b4154578e43fbd1645d88937d7f053eb.jpg" class="card-img-top price-img" alt="Burger">
+                                <span class="price-tag">₦4,000</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Amala & Abula</h5>
+                                <p class="card-text text-muted">Smooth Amala (yam flour) served with the perfect trio: Gbegiri (bean soup), Ewedu, and spicy stew.</p>
+                                <button class="btn btn-sm btn-outline-danger w-100">Order Now</button>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card price-card">
+                            <div class="position-relative">
+                                <img src="https://i.pinimg.com/736x/03/25/63/032563e5bed1a03d6e58228c2cefb1d5.jpg" class="card-img-top price-img" alt="Pizza">
+                                <span class="price-tag">₦4,800</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Coconut Rice & Grilled Turkey</h5>
+                                <p class="card-text text-muted">Exotic long-grain rice cooked with fresh coconut milk and crayfish, garnished with shrimp.</p>
+                                <button class="btn btn-sm btn-outline-danger w-100">Order Now</button>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card price-card">
+                            <div class="position-relative">
+                                <img src="https://i.pinimg.com/736x/7b/8c/c4/7b8cc40d08ff295b9a845c10b9478d47.jpg" class="card-img-top price-img" alt="Pizza">
+                                <span class="price-tag">₦4,800</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Efo Riro & Semovita</h5>
+                                <p class="card-text text-muted">A savory spinach vegetable stew cooked with locust beans and dry fish, served with smooth Semovita.</p>
+                                <button class="btn btn-sm btn-outline-danger w-100">Order Now</button>
+                            </div>
+                        </div>
+                </div>
+                
+                <!-- Row 3 -->
+                <div class="col-md-4" data-aos="zoom-in">
+                        <div class="card price-card">
+                            <div class="position-relative">
+                                <img src="https://i.pinimg.com/736x/b7/68/ad/b768ad875252d4bed5715970582aaf48.jpg" class="card-img-top price-img" alt="Pizza">
+                                <span class="price-tag">₦8,500</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Pizza</h5>
+                                <p class="card-text text-muted">Classic thick-crust dough topped with rich tomato sauce, pepperoni, and fresh bell peppers.</p>
+                                <button class="btn btn-sm btn-outline-danger w-100">Order Now</button>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card price-card">
+                            <div class="position-relative">
+                                <img src="https://i.pinimg.com/1200x/09/37/b6/0937b659acd0ae46a1e1c173ae9bcbc3.jpg" class="card-img-top price-img" alt="Burger">
+                                <span class="price-tag">₦5,000</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Burger</h5>
+                                <p class="card-text text-muted">A juicy grilled beef patty stacked with cheddar cheese and caramelized onions in a soft bun.</p>
+                                <button class="btn btn-sm btn-outline-danger w-100">Order Now</button>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card price-card">
+                            <div class="position-relative">
+                                <img src="https://i.pinimg.com/736x/e5/8d/77/e58d772ef0bf672489a3e9a730916075.jpg" class="card-img-top price-img" alt="Barbeque">
+                                <span class="price-tag">₦4,500</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Barbeque</h5>
+                                <p class="card-text text-muted">Smoky, flame-grilled chicken wings or turkey drumsticks coated in our signature sticky, spicy BBQ glaze.</p>
+                                <button class="btn btn-sm btn-outline-danger w-100">Order Now</button>
+                            </div>
+                        </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -356,9 +275,9 @@
                         <div class="row justify-content-center">
                             <div class="col-md-8">
                                 <div class="review-card shadow-sm">
-                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="client-img" alt="Client">
-                                    <p class="fst-italic">"Absolutely the best catering service we have ever used. The food was hot, delicious, and presented beautifully!"</p>
-                                    <h5 class="fw-bold">- Sarah Johnson</h5>
+                                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQGLpiT2a_C46A/profile-displayphoto-scale_200_200/B4DZkHpbUlIEAY-/0/1756769926099?e=1767225600&v=beta&t=XxI33OAfEtMT5QkaNvvfoOjk5ssWQ7x2-51ii9I-kdg" class="client-img" alt="Client">
+                                    <p class="fst-italic">"I am very particular about my Jollof rice, but Food-U nailed that authentic firewood smoky taste. It wasn’t just 'party food'; it actually had flavor. Highly recommended."</p>
+                                    <h5 class="fw-bold">- Olawoyin Joseph</h5>
                                     <div class="text-warning">
                                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                     </div>
@@ -366,13 +285,44 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="carousel-item">
                         <div class="row justify-content-center">
                             <div class="col-md-8">
                                 <div class="review-card shadow-sm">
-                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="client-img" alt="Client">
-                                    <p class="fst-italic">"The private chef experience was unforgettable. Highly recommended for anniversaries or special dates."</p>
-                                    <h5 class="fw-bold">- Michael Chen</h5>
+                                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQE_99bhZ7ZJLA/profile-displayphoto-shrink_200_200/B4DZZpY7tJGgAg-/0/1745524868679?e=1767225600&v=beta&t=pjoEfEMh4eeRaiJQedEFqpe88MsshP6L78uReWC7Vtw" class="client-img" alt="Client">
+                                    <p class="fst-italic">"We needed lunch for a board meeting with international partners, so presentation was key. Food-U delivered the 'Business Lunch Boxes' exactly at 12:00 PM. The packaging was neat, no spills, and the Grilled Croaker was a hit with the team. Professional service through and through."</p>
+                                    <h5 class="fw-bold">- Favour Alfred</h5>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="review-card shadow-sm">
+                                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQGixAvQWeJpkw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1713568165051?e=1767225600&v=beta&t=J3OAtrFpxtPSVmY2MNavl4FSI4FXNzFI6QvnWNjS2Pc" class="client-img" alt="Client">
+                                    <p class="fst-italic">"Hosting a dinner for 12 people usually stresses me out, but hiring this team was the best decision. They didn’t just cook; they set the table beautifully and, most importantly, cleaned up everything afterward. I actually got to enjoy my own party for once!"</p>
+                                    <h5 class="fw-bold">- Ayinla Samson</h5>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                        <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="review-card shadow-sm">
+                                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQFOcC_SYBuFqQ/profile-displayphoto-scale_200_200/B4DZkH9z2mGQAY-/0/1756775268489?e=1767225600&v=beta&t=S8Sg5qzYUpYnSs8FiB5FIt505J1G-JPEMCo5QHaSfgg" class="client-img" alt="Client">
+                                    <p class="fst-italic">"I was worried about ordering pasta and burgers from a caterer known for Nigerian soups, but I was pleasantly surprised. The BBQ Chicken Wings were sticky and spicy, just how I like them, and the creamy pasta was perfectly cooked. Good to know they can handle both cuisines well."</p>
+                                    <h5 class="fw-bold">- Adekola Marvelous</h5>
                                     <div class="text-warning">
                                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                                     </div>
@@ -381,6 +331,9 @@
                         </div>
                     </div>
                 </div>
+
+
+
                 <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
                 </button>
@@ -398,9 +351,9 @@
                     <h2>Get In Touch</h2>
                     <p class="text-white-50">Have a question or want to book an event? Send us a message.</p>
                     <ul class="list-unstyled mt-4">
-                        <li class="mb-3"><i class="fas fa-map-marker-alt text-danger me-3"></i> 123 Culinary Ave, Food City, FC 90210</li>
-                        <li class="mb-3"><i class="fas fa-phone text-danger me-3"></i> +1 (555) 123-4567</li>
-                        <li class="mb-3"><i class="fas fa-envelope text-danger me-3"></i> hello@gourmethaven.com</li>
+                        <li class="mb-3"><i class="fas fa-map-marker-alt text-danger me-3"></i> Under G, Ogbomoso, Oyo State</li>
+                        <li class="mb-3"><i class="fas fa-phone text-danger me-3"></i> +234 810 2758 951</li>
+                        <li class="mb-3"><i class="fas fa-envelope text-danger me-3"></i> food-u@gmail.com</li>
                     </ul>
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
